@@ -1,3 +1,5 @@
+#!/bin/bash
+
 $branches = git branch --format="%(refname:short)"
 $graphFilePath = ".\graph.md"
 $names = @()
@@ -8,7 +10,7 @@ for ($i = ($branches.Length - 1); $i -ge 0; $i--) {
     $branch = $branches[$i]
     "Branch Name: $branch `n Commits:" | Out-File -FilePath ".\log.txt" -Append
     $commits = git log $branch --format="%H %an %s"
-    If ($branch -ne "main"){
+    If ($branch -ne "main") {
        "`tbranch $branch" | Out-File -FilePath ".\graph.md" -Append
     }
     for ($j = ($commits.Length - 1); $j -ge 0; $j--) {
