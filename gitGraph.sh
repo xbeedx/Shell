@@ -21,7 +21,8 @@ for ($i = ($branches.Length - 1); $i -ge 0; $i--) {
         If (!($names -match $name)) {
             "`tcommit id:`"$name`"" | Out-File -FilePath ".\graph.md" -Append
             $names += $name
+            "  $commit" | Out-File -FilePath ".\log.txt" -Append
         }
     }
  }
- echo "``````" >>.\graph.md
+ "``````"  | Out-File -FilePath ".\graph.md" -Append
