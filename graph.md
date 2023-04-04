@@ -1,3 +1,5 @@
+<div style="transform: rotate(90deg);">
+
 ```mermaid
 	gitGraph
 	commit id:"First commit"
@@ -7,4 +9,5 @@
 	branch Test
 	commit id:"T"
 	commit id:"fix"
-	commit id:"hook"
+``` 
+</div>
