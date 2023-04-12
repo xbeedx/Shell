@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readarray -t branches < <(git branch --format="%(refname:short)")
+readarray -t branches < <(git branch --format="%(refname:short)") aa
 commitsDone=()
 
 >log.txt
@@ -33,5 +33,5 @@ do
         fi
     done
 done
-echo -e  '```" >> graph.md
+echo -e  '```' >> graph.md
 
